@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop File Upload</title>
+  <link rel="stylesheet" href="Domain.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title and Names -->
+    <header class="header">
+      <h1 class="title">DVD</h1>
+      <p class="drag-drop-text">Drag and drop an item to upload</p>
+      <p class="names">Created by: Donadillo, Verzosa, and Delos Reyes</p>
+    </header>
+    
+    <!-- Back Button -->
+    <button class="back-button" onclick="window.location.href='../FileDashboard.html';">←</button>
+
+    <!-- File Upload Section -->
+    <form id="upload-form" class="upload-section">
+      <div id="drop-area" class="drop-area">
+        <p>Drag & Drop your file here or 
+          <span id="browse-link" class="browse-link">Browse</span>
+        </p>
+        <!-- Hidden File Input -->
+        <input 
+          type="file" 
+          id="file-input" 
+          class="file-input" 
+          name="file" 
+          accept="*/*" 
+          style="display: none;"
+        />
+      </div>
+
+      <div id="file-info" class="file-info"></div>
+
+      <button type="submit" id="send-button" class="send-button" disabled>Send</button>
+
+      <!-- Progress bar for upload -->
+      <div id="progress-container" class="progress-container" style="display: none;">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+    </form>
+
+    <!-- Link to File Receiver Dashboard -->
+    <div class="dashboard-link">
+      <a href="FileDashboard.html" class="dashboard-button">Go to File Receiver Dashboard</a>
+    </div>
+  </div>
+
+  <!-- Cloudinary Upload Script -->
+  <script src="https://upload-widget.cloudinary.com/global/all.js"></script>
+  <script src="scriptDomain.js"></script>
+</body>
+</html>
